@@ -1,73 +1,186 @@
-# React + TypeScript + Vite
+# 📄 CV Vitae - Ariel Schmeing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+> Currículo profissional interativo desenvolvido com React, TypeScript e Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Sobre o Projeto
 
-## React Compiler
+Este projeto consiste em um currículo digital moderno e responsivo, desenvolvido como uma Single Page Application (SPA) utilizando as melhores práticas de desenvolvimento web. A aplicação oferece uma experiência visual atraente e profissional para apresentação de informações curriculares.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características
 
-## Expanding the ESLint configuration
+- 🎨 **Interface Moderna**: Design clean e profissional
+- 📱 **Responsivo**: Adaptado para todos os dispositivos
+- ⚡ **Performance**: Build otimizado com Vite
+- 🔒 **Type-Safe**: Desenvolvimento seguro com TypeScript
+- 🧩 **Componentização**: Arquitetura modular com React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologias
 
-```js
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+- **[React](https://reactjs.org/)** - Biblioteca JavaScript para construção de interfaces
+- **[TypeScript](https://www.typescriptlang.org/)** - Superset JavaScript com tipagem estática
+- **[Vite](https://vitejs.dev/)** - Build tool e dev server de nova geração
+- **[ESLint](https://eslint.org/)** - Ferramenta de linting para manter código consistente
+- **[pnpm](https://pnpm.io/)** - Gerenciador de pacotes eficiente
+
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [pnpm](https://pnpm.io/) (recomendado) ou npm/yarn
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/arielschmeing/cv-vitae.git
+```
+
+2. Acesse a pasta do projeto:
+```bash
+cd cv-vitae
+```
+
+3. Instale as dependências:
+```bash
+pnpm install
+```
+
+## 💻 Como Usar
+
+### Modo Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento com Hot Module Replacement (HMR):
+
+```bash
+pnpm dev
+```
+
+A aplicação estará disponível em `http://localhost:5173`
+
+### Build para Produção
+
+Para gerar a versão otimizada para produção:
+
+```bash
+pnpm build
+```
+
+Os arquivos de produção serão gerados na pasta `dist/`
+
+### Preview da Build
+
+Para visualizar a versão de produção localmente:
+
+```bash
+pnpm preview
+```
+
+### Linting
+
+Para verificar e corrigir problemas de código:
+
+```bash
+pnpm lint
+```
+
+## 📁 Estrutura do Projeto
+
+```
+cv-vitae/
+├── public/          # Arquivos estáticos
+├── src/             # Código fonte da aplicação
+│   ├── components/  # Componentes React
+│   ├── assets/      # Imagens, fontes, etc.
+│   ├── styles/      # Arquivos CSS
+│   └── App.tsx      # Componente principal
+├── index.html       # HTML template
+├── package.json     # Dependências e scripts
+├── tsconfig.json    # Configuração TypeScript
+├── vite.config.ts   # Configuração Vite
+└── eslint.config.js # Configuração ESLint
+```
+
+## 🔌 Plugins React Disponíveis
+
+O projeto suporta dois plugins oficiais para Fast Refresh:
+
+- **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)** - Usa Babel para Fast Refresh
+- **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)** - Usa SWC para Fast Refresh
+
+## 🛠️ Personalização
+
+### Expandindo a Configuração do ESLint
+
+Para uma aplicação em produção, recomenda-se habilitar regras de lint type-aware:
+
+```javascript
 export default defineConfig([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
+      // ou para regras mais estritas:
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
+      // opcionalmente, adicione regras estilísticas:
       tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### React Compiler
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+O React Compiler não está habilitado por padrão devido ao impacto na performance de desenvolvimento. Para habilitá-lo, consulte a [documentação oficial](https://react.dev/learn/react-compiler/installation).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📊 Estatísticas do Projeto
+
+- **TypeScript**: 51.8%
+- **CSS**: 45.0%
+- **JavaScript**: 2.0%
+- **HTML**: 1.2%
+
+## 🤝 Contribuindo
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
+4. Push para a branch (`git push origin feature/MinhaFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto é de código aberto e está disponível sob a licença MIT.
+
+## 👤 Autor
+
+**Ariel Schmeing**
+
+- GitHub: [@arielschmeing](https://github.com/arielschmeing)
+
+## 🙏 Agradecimentos
+
+- [React Team](https://react.dev/)
+- [Vite Team](https://vitejs.dev/)
+- [TypeScript Team](https://www.typescriptlang.org/)
+
+---
+
+⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
+
+**Desenvolvido com ❤️ por Ariel Schmeing**
