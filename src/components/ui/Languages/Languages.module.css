@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    min-width: 70px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.bar__level {
+    flex: 1;
+    height: 6px;
+    background: var(--color-light);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.level {
+    height: 100%;
+    transition: width 0.8s ease;
+}
+
+.native__level {
+    width: 100%;
+    background: var(--color-correct);
+    animation: progress 2s ease forwards;
+}
+
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.advanced__level {
+    width: 85%;
+    background: var(--color-correct-alternative);
+    animation: progress__advanceded 2s ease forwards;
+}
+
+@keyframes progress__advanceded {
+    from { width: 0; }
+    to { width: 85%; }
+}
+
+.inter__level {
+    width: 65%;
+    background: var(--color-warning);
+    animation: progress__inter 2s ease forwards;
+}
+
+@keyframes progress__inter {
+    from { width: 0; }
+    to { width: 65%; }
+}

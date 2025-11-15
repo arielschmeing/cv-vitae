@@ -1,0 +1,9 @@
+.container {
+    background: var(--color-light);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid var(--color-primary-dark);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
