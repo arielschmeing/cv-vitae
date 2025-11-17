@@ -127,9 +127,7 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     extends: [
       tseslint.configs.recommendedTypeChecked,
-      // ou para regras mais estritas:
       tseslint.configs.strictTypeChecked,
-      // opcionalmente, adicione regras estilísticas:
       tseslint.configs.stylisticTypeChecked,
     ],
     languageOptions: {
@@ -183,4 +181,4 @@ Este projeto é de código aberto e está disponível sob a licença MIT.
 
 ⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
 
-**Desenvolvido com ❤️ por Ariel Schmeing**
+**Desenvolvido por Ariel Schmeing**
