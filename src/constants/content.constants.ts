@@ -3,7 +3,7 @@ import { APP } from "./app.constants"
 
 export const HEADER = {
     img: {
-        src:"/profile.jpg",
+        src:"/cv-vitae/profile.jpg",
         alt:"Foto de Ariel Schmeing"
     },
     resume: "Desenvolvedor Java Junior especializado em Spring e Docker, com experiência em React e desenvolvimento fullstack. Focado em criar soluções escaláveis e aplicar boas práticas DevOps."
