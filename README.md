@@ -6,6 +6,10 @@
 
 > Currículo profissional interativo desenvolvido com React, TypeScript e Vite.
 
+## 🌐 [Visualizar CV Online](https://arielschmeing.github.io/cv-vitae/)
+
+Acesse o currículo em produção: **https://arielschmeing.github.io/cv-vitae/**
+
 ## 🎯 Sobre o Projeto
 
 Este projeto consiste em um currículo digital moderno e responsivo, desenvolvido como uma Single Page Application (SPA) utilizando as melhores práticas de desenvolvimento web. A aplicação oferece uma experiência visual atraente e profissional para apresentação de informações curriculares.
@@ -127,7 +131,9 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     extends: [
       tseslint.configs.recommendedTypeChecked,
+      // ou para regras mais estritas:
       tseslint.configs.strictTypeChecked,
+      // opcionalmente, adicione regras estilísticas:
       tseslint.configs.stylisticTypeChecked,
     ],
     languageOptions: {
@@ -181,4 +187,4 @@ Este projeto é de código aberto e está disponível sob a licença MIT.
 
 ⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
 
-**Desenvolvido por Ariel Schmeing**
+**Desenvolvido com ❤️ por Ariel Schmeing**
