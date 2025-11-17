@@ -17,7 +17,7 @@ export default function Projects() {
                     )}
                     </div>
                     <div className={Styles.links}>
-                        <a href={project.github} className={Styles.link} >Github</a>
+                        <a href={project.github} className={Styles.link} target="_blank" >Github</a>
                     </div>
                 </div>
             )}

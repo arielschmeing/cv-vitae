@@ -4,7 +4,7 @@ import Styles from "./Contacts.module.css"
 
 export default function Contact() {
     return (
-        <SectionWrapper title="📞 Contato">
+        <SectionWrapper title="📞 Contatos">
             <div className={Styles.content}>
             {CONTACT.map(contact =>
                 <div className={Styles.item__contact} key={contact.name}>

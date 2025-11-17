@@ -5,7 +5,7 @@
 }
 
 .skill {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary-dark));
+    background: linear-gradient(135deg, var(--color-correct-alternative), var(--color-correct-alternative-dark));
     color: var(--color-light);
     padding: 6px 12px;
     border-radius: 20px;
@@ -13,4 +13,8 @@
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: default;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 }

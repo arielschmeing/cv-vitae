@@ -73,6 +73,10 @@ export const CERTIFICATIONS: CertificationsContent[] = [
         year: "2024"
     },
     {
+        name: "Curso em Vídeo - SQL",
+        year: "2024"
+    },
+    {
         name: "CWI - Level 1",
         year: "2024"
     },
@@ -89,7 +93,7 @@ export const CERTIFICATIONS: CertificationsContent[] = [
 export const EXPERIENCES: ExperienceContent[] = [
     {
         name: "CWI Software",
-        role: APP.role_primary,
+        role: APP.role_type,
         period: "Abril 2025 - Julho 2025",
         responsibilities: [
             "Criação de APIs RESTful com Spring Boot e Java",

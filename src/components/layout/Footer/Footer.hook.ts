@@ -1,19 +1,24 @@
 export default function useFooter() {
     const createPDF = () => {
-        const content = "PDF Save"
+        const iframe = document.createElement("iframe")
+        iframe.style.position = "fixed"
+        iframe.style.right = "0"
+        iframe.style.bottom = "0"
+        iframe.style.width = "0"
+        iframe.style.height = "0"
+        iframe.style.border = "0"
 
-        const blob = new Blob([content], { type: "application/pdf" })
-        const url = URL.createObjectURL(blob)
-        const link = document.createElement("a")
-        
-        link.href = url
-        link.download = "archive.pdf"
-        link.click()
+        document.body.appendChild(iframe)
 
-        URL.revokeObjectURL(url)
+        iframe.contentDocument!.write(document.documentElement.outerHTML)
+        iframe.contentDocument!.close()
+
+        iframe.onload = () => {
+            iframe.contentWindow!.focus()
+            iframe.contentWindow!.print()
+            document.body.removeChild(iframe)
+        }
     }
-    
-    return {
-        createPDF
-    }
+
+    return { createPDF }
 }

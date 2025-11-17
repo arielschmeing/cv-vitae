@@ -12,6 +12,7 @@
     --color-correct: #10b981;
     --color-warning: #f59e0b;
     --color-correct-alternative: #3b82f6;
+    --color-correct-alternative-dark: #2e6dd3;
 }
 
 ::selection {
@@ -81,7 +82,7 @@ a {
 
     &:hover {
         text-decoration: underline;
-        color: var(--color-secondary);
+        color: var(--color-correct-alternative);
     }
 }
 

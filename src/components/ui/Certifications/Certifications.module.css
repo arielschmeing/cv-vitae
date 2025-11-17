@@ -10,14 +10,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: white;
-    border-radius: 8px;
+    background: var(--color-light);
+    border-radius: 2px;
     border-left: 3px solid var(--color-correct);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
         transform: translateX(5px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 }
 
