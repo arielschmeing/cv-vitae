@@ -7,9 +7,11 @@ export const Experience = () => {
   
   return (
     <SectionWrapper name="Experience" section={2} >
-      {corporations.map(({ about, date, name, role, skills }) =>
-        <ContentLineCard key={role} about={about} date={date} name={name} role={role} skills={skills} />
-      )}
+      <div className="flex flex-col gap-16">
+        {corporations.map(({ about, date, name, role, skills }) =>
+          <ContentLineCard key={role} about={about} date={date} name={name} role={role} skills={skills} />
+        )}
+      </div>
     </SectionWrapper>
   )
 }
